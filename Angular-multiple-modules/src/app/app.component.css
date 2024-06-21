@@ -1,0 +1,10 @@
+
+.container{
+  border: 6px solid orange;
+}
+#id1{
+  background-color: cornflowerblue;
+  width: auto;
+  height: 250px;
+  text-align: center;
+}

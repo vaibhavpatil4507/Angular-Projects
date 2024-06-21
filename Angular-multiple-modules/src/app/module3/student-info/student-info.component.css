@@ -1,0 +1,17 @@
+
+.container{
+  border: 6px solid rgb(66, 66, 62);
+}
+#id1{
+  background-color: rgba(58, 211, 191, 0.805);
+  width: auto;
+  height: 250px;
+  text-align: center;
+}
+
+table,th, td {
+  border:1px solid;
+  padding: 15px;
+  text-align: left;
+}
+

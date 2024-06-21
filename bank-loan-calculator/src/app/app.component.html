@@ -1,0 +1,22 @@
+<div class="container">
+  <div id="id1">
+    <h1>Home Loan Calculator</h1><br><br>
+
+Loan Amount:-<input type="text" [(ngModel)]="loanAmount" (keydown)="doCalculation()"><br><br>
+Loan Tenure:-<input  type="text" [(ngModel)]="loanTenure" (keydown)="doCalculation()"><br><br>
+Interest Rate:-<input  type="text" [(ngModel)]="interestRate" (keydown)="doCalculation()"><br><br>
+
+<h2>Detailed Calculation</h2>
+<h3>Simple Interest:- {{simpleInterest}}</h3>
+<h3>Total Amount:-{{totalAmount}}</h3>
+<h3>EMI:-{{monthlyEMI}}</h3>
+  </div>
+
+
+  <div id="id2">
+<button (click)="updateCounter('plus')">++</button>
+<h3>Counter:{{count}}</h3>
+<button (click)="updateCounter('minus')">--</button>
+
+  </div>
+</div>

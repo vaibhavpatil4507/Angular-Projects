@@ -1,0 +1,10 @@
+
+.container{
+  border: 6px solid rgb(221, 255, 0);
+}
+#id1{
+  background-color: rgba(100, 237, 237, 0.805);
+  width: auto;
+  height: 250px;
+  text-align: center;
+}

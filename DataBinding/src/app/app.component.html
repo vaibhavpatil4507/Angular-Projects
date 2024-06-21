@@ -1,0 +1,28 @@
+<h1>One Way Databinding</h1>
+<!-- One way data binding is used to data tranform from component to UI. -->
+<h3>first name:- {{fname}}</h3>
+<h3>last name:- {{lname}}</h3>
+<h2>Full name:-{{fname}} {{lname}}</h2>
+
+<br><br><br>
+
+
+<h1>Two way Databinding</h1>
+School Name:-<input [(ngModel)]="schoolName" type="text" ><br>
+<h3>SchoolName:-{{schoolName}}</h3><br><br>
+
+Email Id:-<input [(ngModel)]="emailId" type="text"><br>
+<h3>Email Id:-{{emailId}}</h3>
+<br><br><br>
+
+
+<h1>Events in angular</h1>
+<button (click)="showAlert()">click me</button><br><br>
+
+Keypress Events:- <input #id1 (keypress)="showMsg(id1.value)" type="text"><br><br>
+
+KeyUpEvent:- <input #id2 (keyup)="keyUpEvent(id2.value)" type="text"><br>
+
+blurEvent:- <input #id3 (blur)="blurEventListner(id3.value)" type="text"><br>
+
+<h1 (mouseover)="overEvent()" > Mouseover event</h1>

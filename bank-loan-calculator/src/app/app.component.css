@@ -1,0 +1,11 @@
+.container
+{
+border: 2px solid black;
+}
+
+#id1{
+  padding: 100px;
+  align-items: center;
+
+}
+
