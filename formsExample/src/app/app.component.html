@@ -1,0 +1,66 @@
+<div class="myDiv">
+  <header>
+    <h1>Student Form</h1>
+  </header> <br>
+  <form #studentForm="ngForm">
+
+    <!-- Here ng Form Dorective belongs to FormsModule  and it return object of whole Form property
+    #studentForm is one template ref varibale of ngForm object -->
+
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Enter First Name</label>
+      <input type="email" class="form-control" name="firstname" id="exampleFormControlInput1" #inputFirstName="ngModel" placeholder="Abc" [(ngModel)]="studentObject.firstname" >
+      <small class="text-danger">please enter valid first name</small>
+    </div>
+    <br>
+    touched:{{inputFirstName.valid}} <br>
+    untouched:{{inputFirstName.invalid}}
+
+
+
+    <!-- Two way data binding using ngForm method
+    {{studentForm.value | json}} <br>
+
+     Two way databinding using traditional method (ngModel) -->
+    <!-- {{studentObject |json }} -->
+
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Enter last Name</label>
+      <input type="email" class="form-control" name="lastname" id="exampleFormControlInput1" placeholder="xyz" [(ngModel)]="studentObject.lastname">
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="exampleFormControlInput1" name="email" placeholder="name@example.com" [(ngModel)]="studentObject.email">
+    </div>
+    <div class="mb-3">
+      <label for="genderInput" class="form-label">Select Gender</label> &nbsp;&nbsp;&nbsp;
+      <input type="radio"  id="genderInput" name="gender"  [(ngModel)]="studentObject.gender" value="Male">Male &nbsp;&nbsp;&nbsp;
+      <input type="radio"  id="genderInput" name="gender" [(ngModel)]="studentObject.gender" value="Female">Female
+    </div>
+
+    <div class="mb-3">
+      <label for="selectSubject">select optional subjects</label>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" name="subject1" id="flexCheckDefault" [(ngModel)]="studentObject.subject1">
+      <label class="form-check-label" for="flexCheckDefault">
+        Mathamatics
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" name="subject2"  [(ngModel)]="studentObject.subject2" id="flexCheckChecked" checked>
+      <label class="form-check-label" for="flexCheckChecked">
+        Psycology
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" name="subject3"  [(ngModel)]="studentObject.subject3" id="flexCheckChecked" checked>
+      <label class="form-check-label" for="flexCheckChecked">
+        Information Techonology
+      </label>
+    </div>
+  </div>
+  <div class="mb-3">
+    <button class="btn btn-primary" type="submit">Submit</button>
+  </div>
+  </form>
+</div>
